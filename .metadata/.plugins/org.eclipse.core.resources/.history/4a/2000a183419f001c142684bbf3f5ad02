@@ -1,0 +1,5 @@
+package market.connection;
+
+public class FactoryConnection {
+
+}

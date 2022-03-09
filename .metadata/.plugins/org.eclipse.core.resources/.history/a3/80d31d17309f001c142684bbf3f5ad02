@@ -1,0 +1,26 @@
+package market.connection;
+
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.SQLException;
+
+public class JdbcConnectionApp {
+
+	public static void main(String[] args) {
+		try {
+			System.out.println("Preparando para abrir conexão com banco de dados...");
+			Connection conn = DriverManager.getConnection(
+					"jdbc:postgresql://localhost/market?useTimezon=true&serverTimezone=UTC",
+					"postgres",
+					"1234");
+			System.out.println("Abriu conexão!");
+			conn.close();
+			System.out.println("Conexão encerrada!");
+		} catch (SQLException e) {
+			System.out.println("Erro ao se conectar ao banco de dados");
+			e.printStackTrace();
+		}
+		
+	}
+
+}

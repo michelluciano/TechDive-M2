@@ -1,0 +1,48 @@
+package market.application;
+
+import java.sql.Connection;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
+
+public class Programa {
+	
+	@SuppressWarnings("unused")
+	private static void listProducts(Connection conn) throws SQLException {
+		Statement statement  = conn.createStatement();
+		 statement.execute("select id, name, descricao from produto");
+		
+		 ResultSet resultSet = statement.getResultSet();
+		 int count = 0;
+		 while(resultSet.next()) {
+			 count++;
+			 int id = resultSet.getInt("id");
+			 String name = resultSet.getString("name");
+			 String descricao = resultSet.getString("descricao");
+			 System.out.println("Produto " + count +": id={"+id+"},nome={"+name+"}, descricao={"+descricao+"}");
+		 }
+	}
+	
+	private static boolean deleteProduct(Connection conn) {
+		Statement statement;
+		try {
+			statement = conn.createStatement();
+			statement.execute("DELETE FROM produto WHERE id = 5");
+			
+			int updateCount = statement.getUpdateCount();
+			if (updateCount == 0) {
+				System.out.println("Produto nao encontrado no banco. Não Deletado!");
+				return false;
+			}else {
+				System.out.println("Produto deletado com sucesso!");
+				return true;
+			}
+			
+		} catch (Exception e) {
+			System.out.println("Erro ao Deletar um Produto. Causado por:" + e.getMessage());
+			return false;
+		}
+		
+	}
+
+}
