@@ -29,6 +29,7 @@ public class Programa {
 //			listProducts(connection);
 //			System.out.println("\n DELETANDO PRODUTO");
 //			deleteProduct(connection);
+//			
 //			System.out.println("\nLISTANDO PRODUTO");
 //			listProducts(connection);
 			

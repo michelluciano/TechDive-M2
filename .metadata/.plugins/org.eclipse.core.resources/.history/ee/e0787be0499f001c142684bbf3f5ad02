@@ -5,36 +5,28 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
-import java.util.Scanner;
 
 import market.connection.FactoryConnection;
 
 
 public class Programa {
 	
-	Scanner entrada = new Scanner(System.in);
-	
 	public static void main(String[] args) {
 		try {
 			FactoryConnection connectionFactory = new FactoryConnection();
 			Connection connection = connectionFactory.openConnection();
 			System.out.println("Abriu Conexão");
+			System.out.println("\n Listando PRODUTO");
+			listProducts(connection);
+			System.out.println("\nCriando PRODUTO");
+			createProduct(connection);
+			System.out.println("\nLISTANDO PRODUTO");
+			listProducts(connection);
+			System.out.println("\n DELETANDO PRODUTO");
+			deleteProduct(connection);
 			
-//			// testes
-//			System.out.println("\n Listando PRODUTO");
-//			listProducts(connection);
-//			System.out.println("\nCriando PRODUTO");
-//			createProduct(connection);
-//			System.out.println("\nLISTANDO PRODUTO");
-//			listProducts(connection);
-//			System.out.println("\n DELETANDO PRODUTO");
-//			deleteProduct(connection);
-//			System.out.println("\nLISTANDO PRODUTO");
-//			listProducts(connection);
-			
-			Programa main = new Programa();
-			
-			main.menuPrincipal();
+			System.out.println("\nLISTANDO PRODUTO");
+			listProducts(connection);
 			
 			connectionFactory.closeConnection(connection);
 		} catch (Exception e) {
@@ -44,59 +36,6 @@ public class Programa {
 		
 	}
 	
-	private void menuPrincipal() {
-		while(true){
-            System.out.println("--------------------------------------------------");
-            System.out.println("::              C R U D    P R O                ::");
-            System.out.println("--------------------------------------------------");
-            System.out.println("\nBem-vindo(a) ao sistema. Escolha a opção desejada");
-            System.out.println("1 - Novo Produto");
-            System.out.println("2 - Listar Produto");
-            System.out.println("3 - Pesquisar Produto");
-            System.out.println("4 - Excluir Produto");
-            System.out.println("5 - Atualizar Produto");
-            System.out.print("Sua opção: ");
-            int opcao = Integer.parseInt(entrada.nextLine());
-            // lê a opção do usuário
-           
-            switch(opcao){
-                case 1:
-                	System.out.print("\nDigite o Nome do Produto: ");
-                    String nomeProd = entrada.nextLine();
-                    System.out.print("\nDigite a descrição do Produto: ");
-                    String descProd = entrada.nextLine();
-                    
-                    
-                    
-                    break;
-
-                case 2:
-                    menuGerenciarCidades();
-                    break;
-
-                case 3:
-                    menuGerenciarRegional();
-                    break;
-
-                case 4:
-                    menuGerenciarSegmento();
-                    break;
-
-                case 5:
-                    menuGerenciarEmpresa();
-                    break;
-
-               
-
-                case 00:
-                    System.out.println("\nObrigado por usar o Sistema CRUD\n");
-                            System.exit(0);
-            }
-        }
-    }
-		
-	}
-
 	private static void listProducts(Connection conn) throws SQLException {
 		Statement statement  = conn.createStatement();
 		 statement.execute("select id, name, descricao from produto");
