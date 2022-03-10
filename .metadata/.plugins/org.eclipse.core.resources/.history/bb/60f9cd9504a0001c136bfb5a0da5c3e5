@@ -58,9 +58,9 @@ public class Programa {
 	           
 	            switch(opcao){
 	                case 1:
-	                	System.out.print("Digite o Nome do Produto: ");
+	                	System.out.print("\nDigite o Nome do Produto: ");
 	                    String nomeProd = entrada.nextLine();
-	                    System.out.print("Digite a descrição do Produto: ");
+	                    System.out.print("\nDigite a descrição do Produto: ");
 	                    String descProd = entrada.nextLine();
 	                    createProduct(connection,nomeProd,descProd);
 	                    
@@ -72,19 +72,17 @@ public class Programa {
 	                    break;
 
 	                case 3:
-	                	System.out.print("Digite o Nome do Produto: ");
-	                    int idProd = entrada.nextInt();
-	                	pesquisarProduct(connection, idProd);
+	                    //menuGerenciarRegional();
 	                    break;
 
 	                case 4:
-	                	System.out.print("Digite o ID do Produto a ser deletado: ");
-	                    idProd = entrada.nextInt();
+	                	System.out.print("\nDigite o Nome do Produto: ");
+	                    int idProd = entrada.nextInt();
 	                	deleteProduct(connection,idProd);
 	                    break;
 
 	                case 5:
-	                    //atualizarProd();
+	                    //menuGerenciarEmpresa();
 	                    break;
 
 	               
@@ -143,31 +141,6 @@ public class Programa {
 //	private static void addProduct() {
 //		
 //	}
-	
-	private static boolean pesquisarProduct(Connection conn, int idProd) throws SQLException {
-		String sql = "select * FROM produto WHERE id = ?";
-		Statement statement  = conn.createStatement();
-		try {
-			PreparedStatement preparedStatement = conn.prepareStatement(sql);
-			preparedStatement.setInt(1, idProd);
-			preparedStatement.execute();
-			int updateCount = preparedStatement.getUpdateCount();
-			if (updateCount == 0) {
-				System.out.println("Produto nao encontrado no banco.");
-				return false;
-			}else {
-				ResultSet resultSet = statement.getResultSet();
-				int id = resultSet.getInt("id");
-				 String name = resultSet.getString("name");
-				 String descricao = resultSet.getString("descricao");
-				 System.out.println("Produto : id={"+id+"},nome={"+name+"}, descricao={"+descricao+"}");
-				return true;
-			}
-		} catch (Exception e) {
-			System.out.println("Erro ao Deletar um Produto. Causado por:" + e.getMessage());
-			return false;
-		}
-	}
 	
 	private static boolean deleteProduct(Connection conn, int idProd) {
 		

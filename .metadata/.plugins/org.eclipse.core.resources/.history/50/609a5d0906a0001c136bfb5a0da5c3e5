@@ -84,7 +84,7 @@ public class Programa {
 	                    break;
 
 	                case 5:
-	                    //atualizarProd();
+	                    //menuGerenciarEmpresa();
 	                    break;
 
 	               
@@ -144,9 +144,8 @@ public class Programa {
 //		
 //	}
 	
-	private static boolean pesquisarProduct(Connection conn, int idProd) throws SQLException {
+	private static boolean pesquisarProduct(Connection conn, int idProd) {
 		String sql = "select * FROM produto WHERE id = ?";
-		Statement statement  = conn.createStatement();
 		try {
 			PreparedStatement preparedStatement = conn.prepareStatement(sql);
 			preparedStatement.setInt(1, idProd);
@@ -156,7 +155,6 @@ public class Programa {
 				System.out.println("Produto nao encontrado no banco.");
 				return false;
 			}else {
-				ResultSet resultSet = statement.getResultSet();
 				int id = resultSet.getInt("id");
 				 String name = resultSet.getString("name");
 				 String descricao = resultSet.getString("descricao");

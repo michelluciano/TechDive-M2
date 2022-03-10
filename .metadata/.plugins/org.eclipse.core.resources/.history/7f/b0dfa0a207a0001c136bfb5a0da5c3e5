@@ -84,7 +84,7 @@ public class Programa {
 	                    break;
 
 	                case 5:
-	                    //atualizarProd();
+	                    //menuGerenciarEmpresa();
 	                    break;
 
 	               

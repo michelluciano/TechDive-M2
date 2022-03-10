@@ -1,0 +1,12 @@
+Conectar no postgress
+$ psql -U postgres
+
+\e para sair do banco de dados 
+
+create database market
+“ \l ” para listar os db’s
+“ \c market” para conectar ao database criado
+
+create table PRODUTO (id SERIAL, name VARCHAR(50) NOT NULL, descricao VARCHAR(255), PRIMARY KEY (id));
+“ \dt ” listar as tabelas criadas no banco
+“ \d produto” para descrever a tabela produto
