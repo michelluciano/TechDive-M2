@@ -2,3 +2,6 @@
 1646780285134	Rename type 'JdbcConnectionApp'
 1646786374463	Rename type 'ConnectionFactory'
 1646786440065	Delete element
+1646957677120	Copy package
+1646957687872	Delete element
+1646957711579	Rename package 'model'

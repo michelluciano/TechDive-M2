@@ -106,19 +106,18 @@ public class Programa {
     }
     
 		
-	private static void listProducts(Connection conn) throws SQLException {
+	private List<Product> listProducts(Connection conn) throws SQLException {
 		Statement statement  = conn.createStatement();
 		 statement.execute("select id, name, descricao from produto");
 		
 		 ResultSet resultSet = statement.getResultSet();
-		 int count = 1;
+	
 		 while(resultSet.next()) {
 			 
 			 int id = resultSet.getInt("id");
 			 String name = resultSet.getString("name");
 			 String descricao = resultSet.getString("descricao");
-			 System.out.println("Produto " + count +": id={"+id+"},nome={"+name+"}, descricao={"+descricao+"}");
-			 count++;
+			 
 		 }
 	}
 	
