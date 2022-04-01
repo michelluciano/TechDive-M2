@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Cadastro de escola</title>
+</head>
+<body>
+<form action="http://localhost:8080/projeto/escola" method="POST">
+    <input id="nome"
+           name="nome"
+           placeholder="Nome da escola"/>
+
+    <select id="turmas"
+            name="turmas"
+            multiple="multiple">
+        <option value="1" label="Turma 1"></option>
+        <option value="2" label="Turma 2"></option>
+        <option value="3" label="Turma 3"></option>
+    </select>
+
+    <button type="submit">Cadastrar</button>
+</form>
+</body>
+</html>

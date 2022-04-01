@@ -1,0 +1,221 @@
+{
+	"info": {
+		"_postman_id": "10838439-8076-47fc-87f9-5341850f1bbb",
+		"name": "Aula 2",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "http://localhost:8080/projeto/usuario",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/projeto/usuario",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"projeto",
+						"usuario"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/projeto/usuario/objeto",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"id\": 1,\n    \"nome\": \"Mateus\",\n    \"dataNascimento\": \"2021-11-31\",\n    \"produtos\": [\n        {\n            \"id\": 1,\n            \"nome\": \"Produto Um\"\n        },\n        {\n            \"id\": 2,\n            \"nome\": \"Produto Dois\"\n        }\n    ]\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/projeto/usuario/objeto",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"projeto",
+						"usuario",
+						"objeto"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/projeto/usuario/simples",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/projeto/usuario/simples/1?nome=Mateus&saldo=1000.00",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"projeto",
+						"usuario",
+						"simples",
+						"1"
+					],
+					"query": [
+						{
+							"key": "nome",
+							"value": "Mateus"
+						},
+						{
+							"key": "saldo",
+							"value": "1000.00"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/projeto/usuario/{id}",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/projeto/usuario/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"projeto",
+						"usuario",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/projeto/usuario/{id}/produto",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/projeto/usuario/1/produto",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"projeto",
+						"usuario",
+						"1",
+						"produto"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/projeto/usuario/{id}/produto?nome={nome}&valor={valor}",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/projeto/usuario/3/produto?nome=produto um&valor=10",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"projeto",
+						"usuario",
+						"3",
+						"produto"
+					],
+					"query": [
+						{
+							"key": "nome",
+							"value": "produto um"
+						},
+						{
+							"key": "valor",
+							"value": "10"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/projeto/usuario/{id}/produto/{idProduto}",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/projeto/usuario/3/produto/50153",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"projeto",
+						"usuario",
+						"3",
+						"produto",
+						"50153"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/projeto/usuario",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"nome\": \"Mateus\",\n    \"dataNascimento\": \"2021-01-01\",\n    \"produtos\": [\n        {\n            \"nome\": \"Produto 1\",\n            \"valor\": \"14.40\"\n        }\n    ]\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/projeto/usuario",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"projeto",
+						"usuario"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
