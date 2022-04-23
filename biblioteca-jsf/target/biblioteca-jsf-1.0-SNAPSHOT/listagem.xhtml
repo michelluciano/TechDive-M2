@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:p="http://primefaces.org/ui">
+
+<h:head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>Gestão de Biblioteca</title>
+    <h:outputStylesheet name="css/styles.css" />
+</h:head>
+
+<h:body>
+
+    <div class="header">
+        Gestão de Biblioteca
+    </div>
+
+    <span class="titulo-pagina">Listagem de Livros</span>
+
+    <h:form id="form-livros">
+
+        <p:dataTable id="tb-livros" value="#{livroBean.livros}" var="livro" emptyMessage="Sem registros">
+            <p:column headerText="ID">
+                <h:outputText value="#{livro.id}" />
+            </p:column>
+            <p:column headerText="ISBN">
+                <h:outputText value="#{livro.isbn}" />
+            </p:column>
+            <p:column headerText="Título">
+                <h:outputText value="#{livro.titulo}" />
+            </p:column>
+            <p:column headerText="Autor">
+                <h:outputText value="#{livro.autor}" />
+            </p:column>
+            <p:column headerText="Categoria">
+                <h:outputText value="#{livro.categoria}" />
+            </p:column>
+            <p:column headerText="Data de Publicação">
+                <h:outputText value="#{livro.dataPublicacao}">
+                    <f:converter converterId="MeuLocalDateConverter" />
+                </h:outputText>
+            </p:column>
+            <p:column headerText="Nro de Páginas">
+                <h:outputText value="#{livro.nroDePaginas}" />
+            </p:column>
+        </p:dataTable>
+
+    </h:form>
+
+</h:body>
+</html>

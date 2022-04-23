@@ -1,0 +1,147 @@
+2022-04-04 21:48:16,818 INFO  [org.jboss.as.server.deployment.scanner] (MSC service thread 1-7) WFLYDS0013: Started FileSystemDeploymentService for directory E:\Projetos\TechDive-M2\wildfly-26.0.1.Final\standalone\deployments
+2022-04-04 21:48:16,866 INFO  [org.jboss.as.connector.subsystems.datasources] (MSC service thread 1-1) WFLYJCA0001: Bound data source [java:jboss/datasources/ProjetoDS]
+2022-04-04 21:48:16,913 INFO  [org.wildfly.extension.undertow] (MSC service thread 1-5) WFLYUT0006: Undertow HTTPS listener https listening on 127.0.0.1:8443
+2022-04-04 21:48:17,153 INFO  [org.jboss.ws.common.management] (MSC service thread 1-5) JBWS022052: Starting JBossWS 5.4.4.Final (Apache CXF 3.4.5) 
+2022-04-04 21:48:17,671 INFO  [org.jboss.as.server] (Controller Boot Thread) WFLYSRV0212: Resuming server
+2022-04-04 21:48:17,675 INFO  [org.jboss.as] (Controller Boot Thread) WFLYSRV0025: WildFly Full 26.0.1.Final (WildFly Core 18.0.4.Final) started in 31160ms - Started 298 of 538 services (337 services are lazy, passive or on-demand)
+2022-04-04 21:48:17,679 INFO  [org.jboss.as] (Controller Boot Thread) WFLYSRV0060: Http management interface listening on http://127.0.0.1:9990/management
+2022-04-04 21:48:17,679 INFO  [org.jboss.as] (Controller Boot Thread) WFLYSRV0051: Admin console listening on http://127.0.0.1:9990
+2022-04-04 21:48:20,094 INFO  [org.jboss.as.server.deployment] (MSC service thread 1-4) WFLYSRV0027: Starting deployment of "m2s7.war" (runtime-name: "m2s7.war")
+2022-04-04 21:48:30,128 INFO  [org.jboss.as.jpa] (MSC service thread 1-1) WFLYJPA0002: Read persistence.xml for projeto-datasource
+2022-04-04 21:48:30,571 INFO  [org.jboss.as.jpa] (ServerService Thread Pool -- 34) WFLYJPA0010: Starting Persistence Unit (phase 1 of 2) Service 'm2s7.war#projeto-datasource'
+2022-04-04 21:48:30,621 INFO  [org.hibernate.jpa.internal.util.LogHelper] (ServerService Thread Pool -- 34) HHH000204: Processing PersistenceUnitInfo [
+	name: projeto-datasource
+	...]
+2022-04-04 21:48:30,862 INFO  [org.jboss.weld.deployer] (MSC service thread 1-8) WFLYWELD0003: Processing weld deployment m2s7.war
+2022-04-04 21:48:30,905 INFO  [org.hibernate.Version] (ServerService Thread Pool -- 34) HHH000412: Hibernate Core {5.3.24.Final}
+2022-04-04 21:48:30,907 INFO  [org.hibernate.cfg.Environment] (ServerService Thread Pool -- 34) HHH000206: hibernate.properties not found
+2022-04-04 21:48:31,191 INFO  [org.hibernate.validator.internal.util.Version] (MSC service thread 1-8) HV000001: Hibernate Validator 6.0.22.Final
+2022-04-04 21:48:31,408 INFO  [org.hibernate.annotations.common.Version] (ServerService Thread Pool -- 34) HCANN000001: Hibernate Commons Annotations {5.0.5.Final}
+2022-04-04 21:48:31,862 INFO  [org.jboss.as.ejb3.deployment] (MSC service thread 1-8) WFLYEJB0473: JNDI bindings for session bean named 'UsuarioService' in deployment unit 'deployment "m2s7.war"' are as follows:
+
+	java:global/m2s7/UsuarioService!projeto.service.UsuarioService
+	java:app/m2s7/UsuarioService!projeto.service.UsuarioService
+	java:module/UsuarioService!projeto.service.UsuarioService
+	java:global/m2s7/UsuarioService
+	java:app/m2s7/UsuarioService
+	java:module/UsuarioService
+
+2022-04-04 21:48:32,657 INFO  [io.jaegertracing.internal.JaegerTracer] (MSC service thread 1-8) No shutdown hook registered: Please call close() manually on application shutdown.
+2022-04-04 21:48:32,659 INFO  [org.wildfly.microprofile.opentracing.smallrye] (MSC service thread 1-8) WFLYTRAC0001: Tracer initialized: JaegerTracer(version=Java-1.6.0, serviceName=m2s7.war, reporter=RemoteReporter(sender=org.wildfly.extension.microprofile.opentracing.spi.sender.WildFlySender@74f42729, closeEnqueueTimeout=1000), sampler=ConstSampler(decision=true, tags={sampler.type=const, sampler.param=true}), tags={hostname=DESKTOP-58J9O72, jaeger.version=Java-1.6.0, ip=192.168.1.4}, zipkinSharedRpcSpan=false, expandExceptionLogs=false, useTraceId128Bit=false)
+2022-04-04 21:48:34,067 INFO  [org.infinispan.CONTAINER] (ServerService Thread Pool -- 34) ISPN000128: Infinispan version: Infinispan 'Taedonggang' 12.1.7.Final
+2022-04-04 21:48:34,087 INFO  [org.jboss.as.connector.deployers.jdbc] (MSC service thread 1-8) WFLYJCA0005: Deploying non-JDBC-compliant driver class org.postgresql.Driver (version 42.3)
+2022-04-04 21:48:34,125 INFO  [org.jboss.weld.Version] (MSC service thread 1-8) WELD-000900: 3.1.8 (Final)
+2022-04-04 21:48:34,158 INFO  [org.infinispan.CONFIG] (MSC service thread 1-2) ISPN000152: Passivation configured without an eviction policy being selected. Only manually evicted entities will be passivated.
+2022-04-04 21:48:34,160 INFO  [org.infinispan.CONFIG] (MSC service thread 1-2) ISPN000152: Passivation configured without an eviction policy being selected. Only manually evicted entities will be passivated.
+2022-04-04 21:48:34,232 INFO  [org.infinispan.CONTAINER] (ServerService Thread Pool -- 34) ISPN000556: Starting user marshaller 'org.wildfly.clustering.infinispan.spi.marshalling.InfinispanProtoStreamMarshaller'
+2022-04-04 21:48:34,331 INFO  [org.jboss.as.connector.deployers.jdbc] (MSC service thread 1-4) WFLYJCA0018: Started Driver service with driver-name = m2s7.war_org.postgresql.Driver_42_3
+2022-04-04 21:48:34,387 INFO  [org.infinispan.CONTAINER] (ServerService Thread Pool -- 34) ISPN000025: wakeUpInterval is <= 0, not starting expired purge thread
+2022-04-04 21:48:34,417 INFO  [org.infinispan.CONFIG] (MSC service thread 1-5) ISPN000152: Passivation configured without an eviction policy being selected. Only manually evicted entities will be passivated.
+2022-04-04 21:48:34,418 INFO  [org.infinispan.CONFIG] (MSC service thread 1-5) ISPN000152: Passivation configured without an eviction policy being selected. Only manually evicted entities will be passivated.
+2022-04-04 21:48:34,433 INFO  [org.infinispan.CONTAINER] (ServerService Thread Pool -- 14) ISPN000556: Starting user marshaller 'org.wildfly.clustering.infinispan.spi.marshalling.InfinispanProtoStreamMarshaller'
+2022-04-04 21:48:34,439 INFO  [org.jboss.as.clustering.infinispan] (ServerService Thread Pool -- 34) WFLYCLINF0002: Started http-remoting-connector cache from ejb container
+2022-04-04 21:48:34,663 INFO  [org.jboss.as.jpa] (ServerService Thread Pool -- 34) WFLYJPA0010: Starting Persistence Unit (phase 2 of 2) Service 'm2s7.war#projeto-datasource'
+2022-04-04 21:48:34,728 INFO  [org.infinispan.CONTAINER] (ServerService Thread Pool -- 14) ISPN000025: wakeUpInterval is <= 0, not starting expired purge thread
+2022-04-04 21:48:34,747 INFO  [org.hibernate.dialect.Dialect] (ServerService Thread Pool -- 34) HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL94Dialect
+2022-04-04 21:48:34,790 INFO  [org.hibernate.engine.jdbc.env.internal.LobCreatorBuilderImpl] (ServerService Thread Pool -- 34) HHH000422: Disabling contextual LOB creation as connection was null
+2022-04-04 21:48:34,797 INFO  [org.hibernate.type.BasicTypeRegistry] (ServerService Thread Pool -- 34) HHH000270: Type registration [java.util.UUID] overrides previous : org.hibernate.type.UUIDBinaryType@761716b6
+2022-04-04 21:48:34,829 INFO  [org.hibernate.envers.boot.internal.EnversServiceImpl] (ServerService Thread Pool -- 34) Envers integration enabled? : true
+2022-04-04 21:48:34,917 INFO  [org.jboss.as.clustering.infinispan] (ServerService Thread Pool -- 14) WFLYCLINF0002: Started m2s7.war cache from web container
+2022-04-04 21:48:36,472 WARN  [org.hibernate.engine.jdbc.spi.SqlExceptionHelper] (ServerService Thread Pool -- 34) SQL Warning Code: 0, SQLState: 00000
+2022-04-04 21:48:36,472 WARN  [org.hibernate.engine.jdbc.spi.SqlExceptionHelper] (ServerService Thread Pool -- 34) relation "usuario_role" does not exist, skipping
+2022-04-04 21:48:36,473 WARN  [org.hibernate.engine.jdbc.spi.SqlExceptionHelper] (ServerService Thread Pool -- 34) SQL Warning Code: 0, SQLState: 00000
+2022-04-04 21:48:36,473 WARN  [org.hibernate.engine.jdbc.spi.SqlExceptionHelper] (ServerService Thread Pool -- 34) relation "usuario_role" does not exist, skipping
+2022-04-04 21:48:36,474 WARN  [org.hibernate.engine.jdbc.spi.SqlExceptionHelper] (ServerService Thread Pool -- 34) SQL Warning Code: 0, SQLState: 00000
+2022-04-04 21:48:36,475 WARN  [org.hibernate.engine.jdbc.spi.SqlExceptionHelper] (ServerService Thread Pool -- 34) table "role" does not exist, skipping
+2022-04-04 21:48:36,475 WARN  [org.hibernate.engine.jdbc.spi.SqlExceptionHelper] (ServerService Thread Pool -- 34) SQL Warning Code: 0, SQLState: 00000
+2022-04-04 21:48:36,475 WARN  [org.hibernate.engine.jdbc.spi.SqlExceptionHelper] (ServerService Thread Pool -- 34) table "usuario" does not exist, skipping
+2022-04-04 21:48:36,476 WARN  [org.hibernate.engine.jdbc.spi.SqlExceptionHelper] (ServerService Thread Pool -- 34) SQL Warning Code: 0, SQLState: 00000
+2022-04-04 21:48:36,476 WARN  [org.hibernate.engine.jdbc.spi.SqlExceptionHelper] (ServerService Thread Pool -- 34) table "usuario_role" does not exist, skipping
+2022-04-04 21:48:36,477 WARN  [org.hibernate.engine.jdbc.spi.SqlExceptionHelper] (ServerService Thread Pool -- 34) SQL Warning Code: 0, SQLState: 00000
+2022-04-04 21:48:36,477 WARN  [org.hibernate.engine.jdbc.spi.SqlExceptionHelper] (ServerService Thread Pool -- 34) sequence "hibernate_sequence" does not exist, skipping
+2022-04-04 21:48:37,405 INFO  [org.hibernate.tool.schema.internal.SchemaCreatorImpl] (ServerService Thread Pool -- 34) HHH000476: Executing import script 'org.hibernate.tool.schema.internal.exec.ScriptSourceInputNonExistentImpl@26744a09'
+2022-04-04 21:48:37,418 INFO  [org.hibernate.hql.internal.QueryTranslatorFactoryInitiator] (ServerService Thread Pool -- 34) HHH000397: Using ASTQueryTranslatorFactory
+2022-04-04 21:48:39,022 INFO  [org.omnifaces.ApplicationInitializer] (ServerService Thread Pool -- 34) Using OmniFaces version 3.8.1
+2022-04-04 21:48:39,385 INFO  [io.undertow.servlet] (ServerService Thread Pool -- 34) Initializing Shiro environment
+2022-04-04 21:48:39,385 INFO  [org.apache.shiro.web.env.EnvironmentLoader] (ServerService Thread Pool -- 34) Starting Shiro environment initialization.
+2022-04-04 21:48:39,497 INFO  [org.apache.shiro.config.ReflectionBuilder] (ServerService Thread Pool -- 34) An instance with name 'authc' already exists.  Redefining this object as a new instance of type org.apache.shiro.web.filter.authc.PassThruAuthenticationFilter
+2022-04-04 21:48:39,517 INFO  [org.apache.shiro.web.env.EnvironmentLoader] (ServerService Thread Pool -- 34) Shiro environment initialized in 131 ms.
+2022-04-04 21:48:39,587 INFO  [javax.enterprise.resource.webcontainer.jsf.config] (ServerService Thread Pool -- 34) Inicializando Mojarra 2.3.17.SP01 para o contexto ''
+2022-04-04 21:48:40,297 INFO  [javax.enterprise.resource.webcontainer.jsf.application] (ServerService Thread Pool -- 34) Unable to discern ProjectStage for value ${env.FACES_PROJECT_STAGE:Development}.
+2022-04-04 21:48:40,395 INFO  [javax.enterprise.resource.webcontainer.jsf.config] (ServerService Thread Pool -- 34) Unable to discern ProjectStage for value ${env.FACES_PROJECT_STAGE:Development}.
+2022-04-04 21:48:42,734 INFO  [org.primefaces.webapp.PostConstructApplicationEventListener] (ServerService Thread Pool -- 34) Running on PrimeFaces 11.0.0
+2022-04-04 21:48:43,382 INFO  [org.wildfly.extension.undertow] (ServerService Thread Pool -- 34) WFLYUT0021: Registered web context: '/' for server 'default-server'
+2022-04-04 21:48:43,539 INFO  [org.jboss.as.server] (management-handler-thread - 1) WFLYSRV0010: Deployed "m2s7.war" (runtime-name : "m2s7.war")
+2022-04-04 21:49:36,729 INFO  [org.hibernate.engine.internal.StatisticalLoggingSessionEventListener] (default task-2) Session Metrics {
+    167351000 nanoseconds spent acquiring 4 JDBC connections;
+    270400 nanoseconds spent releasing 4 JDBC connections;
+    175968200 nanoseconds spent preparing 6 JDBC statements;
+    484878800 nanoseconds spent executing 6 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC batches;
+    0 nanoseconds spent performing 0 L2C puts;
+    0 nanoseconds spent performing 0 L2C hits;
+    0 nanoseconds spent performing 0 L2C misses;
+    402418400 nanoseconds spent executing 2 flushes (flushing a total of 4 entities and 2 collections);
+    34000 nanoseconds spent executing 1 partial-flushes (flushing a total of 0 entities and 0 collections)
+}
+2022-04-04 21:49:38,066 INFO  [org.hibernate.engine.internal.StatisticalLoggingSessionEventListener] (default task-2) Session Metrics {
+    391700 nanoseconds spent acquiring 1 JDBC connections;
+    26500 nanoseconds spent releasing 1 JDBC connections;
+    541300 nanoseconds spent preparing 1 JDBC statements;
+    1319000 nanoseconds spent executing 1 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC batches;
+    0 nanoseconds spent performing 0 L2C puts;
+    0 nanoseconds spent performing 0 L2C hits;
+    0 nanoseconds spent performing 0 L2C misses;
+    0 nanoseconds spent executing 0 flushes (flushing a total of 0 entities and 0 collections);
+    7800 nanoseconds spent executing 1 partial-flushes (flushing a total of 0 entities and 0 collections)
+}
+2022-04-04 21:51:57,456 INFO  [org.hibernate.engine.internal.StatisticalLoggingSessionEventListener] (default task-2) Session Metrics {
+    489700 nanoseconds spent acquiring 1 JDBC connections;
+    29500 nanoseconds spent releasing 1 JDBC connections;
+    653800 nanoseconds spent preparing 1 JDBC statements;
+    1165900 nanoseconds spent executing 1 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC batches;
+    0 nanoseconds spent performing 0 L2C puts;
+    0 nanoseconds spent performing 0 L2C hits;
+    0 nanoseconds spent performing 0 L2C misses;
+    0 nanoseconds spent executing 0 flushes (flushing a total of 0 entities and 0 collections);
+    7400 nanoseconds spent executing 1 partial-flushes (flushing a total of 0 entities and 0 collections)
+}
+2022-04-04 21:54:51,205 INFO  [org.jboss.as.connector.deployers.jdbc] (MSC service thread 1-6) WFLYJCA0019: Stopped Driver service with driver-name = m2s7.war_org.postgresql.Driver_42_3
+2022-04-04 21:54:51,207 INFO  [org.wildfly.extension.undertow] (ServerService Thread Pool -- 34) WFLYUT0022: Unregistered web context: '/' from server 'default-server'
+2022-04-04 21:54:51,210 WARN  [org.infinispan.cache.impl.CacheImpl] (ServerService Thread Pool -- 34) ISPN000419: Eviction of an entry invoked without an explicit eviction strategy for cache m2s7.war
+2022-04-04 21:54:51,242 WARN  [org.infinispan.cache.impl.CacheImpl] (InfinispanSessionManagerFactory - 1) ISPN000419: Eviction of an entry invoked without an explicit eviction strategy for cache m2s7.war
+2022-04-04 21:54:51,242 WARN  [org.infinispan.cache.impl.CacheImpl] (InfinispanSessionManagerFactory - 2) ISPN000419: Eviction of an entry invoked without an explicit eviction strategy for cache m2s7.war
+2022-04-04 21:54:51,779 WARN  [org.infinispan.cache.impl.CacheImpl] (ServerService Thread Pool -- 34) ISPN000419: Eviction of an entry invoked without an explicit eviction strategy for cache m2s7.war
+2022-04-04 21:54:51,779 WARN  [org.infinispan.cache.impl.CacheImpl] (InfinispanSessionManagerFactory - 2) ISPN000419: Eviction of an entry invoked without an explicit eviction strategy for cache m2s7.war
+2022-04-04 21:54:51,779 WARN  [org.infinispan.cache.impl.CacheImpl] (InfinispanSessionManagerFactory - 1) ISPN000419: Eviction of an entry invoked without an explicit eviction strategy for cache m2s7.war
+2022-04-04 21:54:51,792 WARN  [org.infinispan.cache.impl.CacheImpl] (ServerService Thread Pool -- 34) ISPN000419: Eviction of an entry invoked without an explicit eviction strategy for cache m2s7.war
+2022-04-04 21:54:51,792 WARN  [org.infinispan.cache.impl.CacheImpl] (InfinispanSessionManagerFactory - 1) ISPN000419: Eviction of an entry invoked without an explicit eviction strategy for cache m2s7.war
+2022-04-04 21:54:51,792 WARN  [org.infinispan.cache.impl.CacheImpl] (InfinispanSessionManagerFactory - 2) ISPN000419: Eviction of an entry invoked without an explicit eviction strategy for cache m2s7.war
+2022-04-04 21:54:51,794 WARN  [org.infinispan.cache.impl.CacheImpl] (ServerService Thread Pool -- 34) ISPN000419: Eviction of an entry invoked without an explicit eviction strategy for cache m2s7.war
+2022-04-04 21:54:51,795 WARN  [org.infinispan.cache.impl.CacheImpl] (InfinispanSessionManagerFactory - 2) ISPN000419: Eviction of an entry invoked without an explicit eviction strategy for cache m2s7.war
+2022-04-04 21:54:51,795 WARN  [org.infinispan.cache.impl.CacheImpl] (InfinispanSessionManagerFactory - 1) ISPN000419: Eviction of an entry invoked without an explicit eviction strategy for cache m2s7.war
+2022-04-04 21:54:51,806 INFO  [io.undertow.servlet] (ServerService Thread Pool -- 34) Cleaning up Shiro Environment
+2022-04-04 21:54:51,823 INFO  [org.jboss.as.jpa] (ServerService Thread Pool -- 98) WFLYJPA0011: Stopping Persistence Unit (phase 2 of 2) Service 'm2s7.war#projeto-datasource'
+2022-04-04 21:54:51,854 INFO  [org.hibernate.orm.beans] (ServerService Thread Pool -- 98) HHH10005004: Stopping BeanContainer : org.hibernate.resource.beans.container.internal.CdiBeanContainerExtendedAccessImpl@2c27b5a8
+2022-04-04 21:54:51,857 INFO  [org.jboss.as.jpa] (ServerService Thread Pool -- 98) WFLYJPA0011: Stopping Persistence Unit (phase 1 of 2) Service 'm2s7.war#projeto-datasource'
+2022-04-04 21:54:51,993 INFO  [org.jboss.as.clustering.infinispan] (ServerService Thread Pool -- 101) WFLYCLINF0003: Stopped m2s7.war cache from web container
+2022-04-04 21:54:52,005 INFO  [org.infinispan.manager.DefaultCacheManager] (ServerService Thread Pool -- 101) Stopping cache manager null on null
+2022-04-04 21:54:52,612 INFO  [org.jboss.as.server.deployment] (MSC service thread 1-2) WFLYSRV0028: Stopped deployment m2s7.war (runtime-name: m2s7.war) in 1411ms
+2022-04-04 21:54:52,699 INFO  [org.jboss.as.server] (management-handler-thread - 1) WFLYSRV0009: Undeployed "m2s7.war" (runtime-name: "m2s7.war")
+2022-04-04 21:54:52,837 INFO  [org.jboss.as.server] (management-handler-thread - 1) WFLYSRV0272: Suspending server
+2022-04-04 21:54:52,839 INFO  [org.jboss.as.ejb3] (management-handler-thread - 1) WFLYEJB0493: Jakarta Enterprise Beans subsystem suspension complete
+2022-04-04 21:54:52,841 INFO  [org.jboss.as.server] (Management Triggered Shutdown) WFLYSRV0241: Shutting down in response to management operation 'shutdown'
+2022-04-04 21:54:52,897 INFO  [org.jboss.as.connector.subsystems.datasources] (MSC service thread 1-1) WFLYJCA0010: Unbound data source [java:jboss/datasources/ProjetoDS]
+2022-04-04 21:54:52,904 INFO  [org.wildfly.extension.undertow] (MSC service thread 1-4) WFLYUT0008: Undertow HTTPS listener https suspending
+2022-04-04 21:54:52,905 INFO  [org.wildfly.extension.undertow] (MSC service thread 1-4) WFLYUT0007: Undertow HTTPS listener https stopped, was bound to 127.0.0.1:8443
+2022-04-04 21:54:52,908 INFO  [org.jboss.as.mail.extension] (MSC service thread 1-4) WFLYMAIL0002: Unbound mail session [java:jboss/mail/Default]
+2022-04-04 21:54:52,908 INFO  [org.wildfly.extension.undertow] (MSC service thread 1-3) WFLYUT0019: Host default-host stopping
+2022-04-04 21:54:52,913 INFO  [org.wildfly.extension.undertow] (MSC service thread 1-5) WFLYUT0008: Undertow HTTP listener default suspending
+2022-04-04 21:54:52,913 INFO  [org.wildfly.extension.undertow] (MSC service thread 1-5) WFLYUT0007: Undertow HTTP listener default stopped, was bound to 127.0.0.1:8080
+2022-04-04 21:54:52,914 INFO  [org.jboss.as.clustering.infinispan] (ServerService Thread Pool -- 98) WFLYCLINF0003: Stopped http-remoting-connector cache from ejb container
+2022-04-04 21:54:52,916 INFO  [org.wildfly.extension.undertow] (MSC service thread 1-7) WFLYUT0004: Undertow 2.2.14.Final stopping
+2022-04-04 21:54:52,917 INFO  [org.infinispan.manager.DefaultCacheManager] (ServerService Thread Pool -- 104) Stopping cache manager null on null
+2022-04-04 21:54:53,163 INFO  [org.jboss.as.connector.deployers.jdbc] (MSC service thread 1-7) WFLYJCA0019: Stopped Driver service with driver-name = postgresql
+2022-04-04 21:54:53,177 INFO  [org.jboss.as] (MSC service thread 1-3) WFLYSRV0050: WildFly Full 26.0.1.Final (WildFly Core 18.0.4.Final) stopped in 278ms
