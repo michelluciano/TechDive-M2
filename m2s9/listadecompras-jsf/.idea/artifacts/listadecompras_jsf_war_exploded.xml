@@ -14,13 +14,11 @@
           <element id="module-output" name="listadecompras-jsf" />
         </element>
         <element id="directory" name="lib">
-          <element id="library" level="project" name="Maven: org.primefaces:primefaces:11.0.0" />
-          <element id="library" level="project" name="Maven: javax.annotation:javax.annotation-api:1.3.2" />
           <element id="library" level="project" name="Maven: org.hibernate.validator:hibernate-validator:6.2.0.Final" />
+          <element id="library" level="project" name="Maven: jakarta.validation:jakarta.validation-api:2.0.2" />
           <element id="library" level="project" name="Maven: org.jboss.logging:jboss-logging:3.4.1.Final" />
           <element id="library" level="project" name="Maven: com.fasterxml:classmate:1.5.1" />
           <element id="library" level="project" name="Maven: org.glassfish:jakarta.faces:2.3.16" />
-          <element id="library" level="project" name="Maven: jakarta.validation:jakarta.validation-api:8.0.0" />
         </element>
       </element>
       <element id="directory" name="META-INF">

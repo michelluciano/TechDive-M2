@@ -1,18 +1,20 @@
 package com.example.listadecomprasjsf.model;
 
-import org.hibernate.validator.constraints.NotEmpty;
+import javax.validation.constraints.NotEmpty;
+import javax.validation.constraints.NotNull;
 
 public class ItemDeLista {
 
-    @NotEmpty(message="{campo.obrigatorio}")
+    @NotEmpty(message = "{campo.obrigatorio}")
     private String descricao;
 
+    @NotNull(message = "{campo.obrigatorio}")
     private Float quantidade;
 
+    @NotEmpty(message = "{campo.obrigatorio}")
     private String medida;
 
-    public ItemDeLista() {
-    }
+    public ItemDeLista() { }
 
     public ItemDeLista(String descricao, Float quantidade, String medida) {
         this.descricao = descricao;
@@ -22,11 +24,7 @@ public class ItemDeLista {
 
     @Override
     public String toString() {
-        return "ItemDeLista{" +
-                "descricao='" + descricao + '\'' +
-                ", quantidade=" + quantidade +
-                ", medida='" + medida + '\'' +
-                '}';
+        return quantidade + " " + medida + "(s) de " + descricao;
     }
 
     public String getDescricao() {
